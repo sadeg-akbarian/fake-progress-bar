@@ -3,21 +3,42 @@
 }
 
 :root {
+  --clr-fully-loaded: rgba(37, 19, 199, 1);
 }
 
 html {
-  font-family: ;
   direction: ltr;
-  font-size: ;
 }
 
 body {
   margin: 0;
-  height: ;
-  background-color: var(--page-background-color);
-  color: var(--page-text-color);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Fallbacks für manche Styles benutzen, S.13 unten */
+main {
+  width: 55vmin;
+  height: 14vmin;
+  border: 1.5vmin solid var(--clr-fully-loaded);
+  border-radius: 1.5vmin;
+  display: flex;
+  justify-content: left;
+}
 
-/* Füge media queries ein, S.15 unten*/
+div {
+  width: 0.5vmin;
+  height: 11.5vmin;
+  background-color: var(--clr-fully-loaded);
+}
+
+div:hover {
+  background-color: var(--clr-fully-loaded);
+  opacity: 0;
+}
+
+div:hover ~ div {
+  background-color: var(--clr-fully-loaded);
+  opacity: 0;
+}
